@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MAUI_Frame_Nav.Views.ProductsDetails"
+             Title="ProductsDetails"             
+             x:Name="this"
+             >
+    <StackLayout>
+        <Label Text="Product Details" FontAttributes="Bold" FontSize="Large" HorizontalOptions="Center" Margin="0,20,0,20" />
+        <Label Text="ID: " />
+        <Label Text="{Binding Product.Id}" />
+        <Label Text="Product Name: " />
+        <Label Text="{Binding Product.Product}" />
+        <Label Text="Price: " />
+        <Label Text="{Binding Product.Price, StringFormat='Price: {0:C}'}" />
+        <Label Text="Code: " />
+        <Label Text="{Binding Product.Code}" />
+    </StackLayout>
+</ContentPage>

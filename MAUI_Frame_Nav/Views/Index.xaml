@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MAUI_Frame_Nav.Views"
+             x:Class="MAUI_Frame_Nav.Views.Index"
+             xmlns:dg="clr-namespace:Maui.DataGrid;assembly=Maui.DataGrid"
+             BackgroundColor="Black">
+    <dg:DataGrid x:Name="dgProduct" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" VerticalOptions="FillAndExpand"
+                 ItemsSource="{Binding Products}"
+                 RowHeight="50"
+                 >
+        <dg:DataGrid.Columns>
+            <dg:DataGridColumn Title="Id" PropertyName="Id" Width="1*"/>
+            <dg:DataGridColumn Title="Product" PropertyName="Product" Width="2*"/>
+            <dg:DataGridColumn Title="Price" PropertyName="Price" Width="2*"/>
+            <dg:DataGridColumn Title="CALC Code" PropertyName="Code" Width="1*"/>
+            <dg:DataGridColumn Width="1*">
+                <dg:DataGridColumn.CellTemplate>
+                    <DataTemplate>
+                        <Button Text="Edit" Command="{Binding EditCommand}" CommandParameter="{Binding}"/>
+                    </DataTemplate>
+                </dg:DataGridColumn.CellTemplate>
+            </dg:DataGridColumn>
+            <dg:DataGridColumn Width="1*">
+                <dg:DataGridColumn.CellTemplate>
+                    <DataTemplate>
+                        <Button Text="Delete" Command="{Binding DeleteCommand}" CommandParameter="{Binding}"/>
+                    </DataTemplate>
+                </dg:DataGridColumn.CellTemplate>
+            </dg:DataGridColumn>
+        </dg:DataGrid.Columns>
+    </dg:DataGrid>
+</ContentPage>
+
+
+<!--RowsBackgroundColorPalette="{StaticResource RowColorPalette}"
+BorderColor="{StaticResource GridBorderColor}"
+HeaderBackground="{StaticResource GridHeaderBgColor}"
+HeaderBordersVisible="{Binding HeaderBordersVisible}"-->
+<!--Style="{StaticResource ButtonLabel}"-->

@@ -1,0 +1,13 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MAUI_Frame_Nav.Components.InsertProductView"
+             x:Name="this">
+
+    <StackLayout>
+        <Label Text="Insert New Product" FontAttributes="Bold" FontSize="Large" HorizontalOptions="Center" Margin="0,20,0,20" />
+        <Entry Placeholder="Product Name" Text="{Binding ProductName, Mode=TwoWay}" />
+        <Entry Placeholder="Price" Text="{Binding Price, Mode=TwoWay}" />
+        <Entry Placeholder="Code" Text="{Binding Code, Mode=TwoWay}" />
+        <Button Text="Insert" Command="{Binding InsertCommand}" />
+    </StackLayout>
+</ContentPage>
