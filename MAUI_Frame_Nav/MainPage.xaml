@@ -21,5 +21,7 @@
             <Label Text="Product List" FontAttributes="Bold" FontSize="Large" HorizontalOptions="Center" Margin="0,20,0,20" />
             <custom:ProductListView x:Name="productListView"/>
         </Grid>
+
+        <!--<Frame x:Name="myFrame"></Frame>-->
     </Grid>
 </ContentPage>

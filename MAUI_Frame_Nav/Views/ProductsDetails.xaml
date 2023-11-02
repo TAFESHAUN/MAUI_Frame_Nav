@@ -15,5 +15,6 @@
         <Label Text="{Binding Product.Price, StringFormat='Price: {0:C}'}" />
         <Label Text="Code: " />
         <Label Text="{Binding Product.Code}" />
+        <!--<Label Text="{Binding Product.IsDeal}"/>-->
     </StackLayout>
 </ContentPage>

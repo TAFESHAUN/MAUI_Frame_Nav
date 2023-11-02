@@ -1,6 +1,4 @@
-﻿
-
-namespace MAUI_Frame_Nav.Data
+﻿namespace MAUI_Frame_Nav.Data
 {
     public class Products
     {

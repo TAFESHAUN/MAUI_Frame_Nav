@@ -57,11 +57,6 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Folder Include="Model\" />
-	  <Folder Include="Data\" />
-	</ItemGroup>
-
-	<ItemGroup>
 	  <Compile Update="Components\ProductListView.xaml.cs">
 	    <DependentUpon>ProductListView.xaml</DependentUpon>
 	  </Compile>
