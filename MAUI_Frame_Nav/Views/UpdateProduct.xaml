@@ -1,6 +1,6 @@
-<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MAUI_Frame_Nav.Components.UpdateProductView">
+             x:Class="MAUI_Frame_Nav.Views.UpdateProduct">
 
     <StackLayout>
         <Label Text="Update Product" FontAttributes="Bold" FontSize="Large" HorizontalOptions="Center" Margin="0,20,0,20" />
@@ -10,4 +10,4 @@
         <Entry x:Name="CodeEntry" Placeholder="Code" />
         <Button Text="Update" Clicked="OnUpdateClicked" />
     </StackLayout>
-</ContentView>
+</ContentPage>

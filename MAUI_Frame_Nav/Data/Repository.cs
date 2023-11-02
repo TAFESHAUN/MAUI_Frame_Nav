@@ -111,5 +111,7 @@ namespace MAUI_Frame_Nav.Data
             return result;
         }
         #endregion
+
+        //GET PROMOTIONS TABLE DATA HERE
     }
 }

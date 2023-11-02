@@ -55,7 +55,7 @@ namespace MAUI_Frame_Nav.ViewModels
                 await App.Current.MainPage.DisplayAlert("Success", "Insert success", "Ok");
 
                 // Use PopAsync to navigate back
-                await Application.Current.MainPage.Navigation.PopAsync();
+                await Application.Current.MainPage.Navigation.PopToRootAsync();
             }
             else
             {

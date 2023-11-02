@@ -12,6 +12,7 @@ namespace MAUI_Frame_Nav
         public MainPage()
         {
             InitializeComponent();
+            //myFrame.Navigate(new Views.Index(_repo));
         }
 
         

@@ -1,4 +1,6 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using MAUI_Frame_Nav.Components;
+using MAUI_Frame_Nav.ViewModels;
+using Microsoft.Extensions.Logging;
 
 namespace MAUI_Frame_Nav
 {
@@ -15,8 +17,10 @@ namespace MAUI_Frame_Nav
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                 });
 
+            //builder.Services.AddTransient<ProductDetailsView>();
+            //builder.Services.AddTransient<ProductDetailsViewModel>();
 #if DEBUG
-		builder.Logging.AddDebug();
+            builder.Logging.AddDebug();
 #endif
 
             return builder.Build();

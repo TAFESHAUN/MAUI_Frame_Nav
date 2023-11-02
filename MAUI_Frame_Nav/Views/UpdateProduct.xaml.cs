@@ -1,16 +1,20 @@
 using Microsoft.Maui.Controls;
 using MAUI_Frame_Nav.Data;
 
-namespace MAUI_Frame_Nav.Components
+namespace MAUI_Frame_Nav.Views
 {
-    public partial class UpdateProductView : ContentView
+    public partial class UpdateProduct : ContentPage
     {
         private Repository _repository;
 
-        public UpdateProductView()
+        public UpdateProduct(Products sentProduct)
         {
             InitializeComponent();
             _repository = new Repository();
+            ProductIdEntry.Text = sentProduct.Id.ToString();
+            ProductNameEntry.Text = sentProduct.Product;
+            PriceEntry.Text = sentProduct?.Price.ToString();
+            CodeEntry.Text = sentProduct?.Code.ToString();
         }
 
         private void OnUpdateClicked(object sender, EventArgs e)
@@ -33,10 +37,12 @@ namespace MAUI_Frame_Nav.Components
             if (result > 0)
             {
                 // Update successful, you can show a success message or update the product list.
+                Navigation.PopToRootAsync();
             }
             else
             {
                 // Update failed, handle the error.
+                DisplayAlert("Update Failed", "Update Failed to Update Database", "ok");
             }
         }
     }

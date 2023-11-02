@@ -57,18 +57,25 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Folder Include="Model\" />
-	  <Folder Include="Data\" />
-	</ItemGroup>
-
-	<ItemGroup>
+	  <Compile Update="Views\DeleteProduct.xaml.cs">
+	    <DependentUpon>DeleteProduct.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Components\ProductDetailsView.xaml.cs">
+	    <DependentUpon>ProductDetailsView.xaml</DependentUpon>
+	  </Compile>
 	  <Compile Update="Components\ProductListView.xaml.cs">
 	    <DependentUpon>ProductListView.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Views\UpdateProduct.xaml.cs">
+	    <DependentUpon>UpdateProduct.xaml</DependentUpon>
 	  </Compile>
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="Components\DeleteProductView.xaml">
+	  <MauiXaml Update="Views\DeleteProduct.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Components\ProductDetailsView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\InsertProductView.xaml">
@@ -77,7 +84,7 @@
 	  <MauiXaml Update="Components\ProductListView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Components\UpdateProductView.xaml">
+	  <MauiXaml Update="Views\UpdateProduct.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\Index.xaml">
