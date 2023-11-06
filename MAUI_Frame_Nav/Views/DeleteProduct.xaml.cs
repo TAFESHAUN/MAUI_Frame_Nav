@@ -2,6 +2,9 @@ using MAUI_Frame_Nav.Data;
 
 namespace MAUI_Frame_Nav.Views
 {
+    //CHANGE OR ADD CONTENT VIEW ON THIS PAGE
+    //IF I didn't want the component/custom UI
+    //I can just set the viewmodel now
     public partial class DeleteProduct : ContentPage
     {
         private Repository _repository;
@@ -10,12 +13,15 @@ namespace MAUI_Frame_Nav.Views
         {
             InitializeComponent();
             _repository = new Repository();
-            ProductIdEntry.Text = sentProduct.Id.ToString();
+            ProductId.Text = sentProduct.Id.ToString();
+            ProductName.Text = sentProduct.Product.ToString();
+            Price.Text = sentProduct.Price.ToString();
+            Code.Text = sentProduct.Code.ToString();    
         }
 
         private void OnDeleteClicked(object sender, EventArgs e)
         {
-            int productId = Convert.ToInt32(ProductIdEntry.Text);
+            int productId = Convert.ToInt32(ProductId.Text);
 
             Products productToDelete = new Products
             {

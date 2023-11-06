@@ -6,10 +6,12 @@ namespace MAUI_Frame_Nav.Components
 {
     public partial class ProductDetailsView : ContentView
     {
+        //private Repository _repository;
         private static Products l_Prod;
         public ProductDetailsView()
         {
             InitializeComponent();
+            //_repository = new Repository();
 
         }
 
@@ -44,6 +46,19 @@ namespace MAUI_Frame_Nav.Components
 
         private void Button_Clicked_Delete(object sender, EventArgs e)
         {
+            //App.Current.MainPage.DisplayAlert($"Delete {l_Prod.Id}", $"Deleting {l_Prod.Product}", "OK");
+            //int result = _repository.DeleteProduct(l_Prod);
+
+            //if (result > 0)
+            //{
+            //    // Deletion successful, you can show a success message or update the product list.
+            //    Navigation.PopToRootAsync();
+            //}
+            //else
+            //{
+            //    // Deletion failed, handle the error.
+            //    App.Current.MainPage.DisplayAlert("Delete Failed", "Delete Failed to Delete from Database", "ok");
+            //}
             var productDeletePage = new DeleteProduct(l_Prod);
             Navigation.PushAsync(productDeletePage);
         }

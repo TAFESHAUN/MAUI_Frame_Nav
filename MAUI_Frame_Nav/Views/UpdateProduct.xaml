@@ -2,9 +2,9 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MAUI_Frame_Nav.Views.UpdateProduct">
 
-    <StackLayout>
+    <StackLayout Padding="10" BackgroundColor="MediumPurple">
         <Label Text="Update Product" FontAttributes="Bold" FontSize="Large" HorizontalOptions="Center" Margin="0,20,0,20" />
-        <Entry x:Name="ProductIdEntry" Placeholder="Product ID" />
+        <Label x:Name="ProductIdLabel" Text="Product ID" />
         <Entry x:Name="ProductNameEntry" Placeholder="Product Name" />
         <Entry x:Name="PriceEntry" Placeholder="Price" />
         <Entry x:Name="CodeEntry" Placeholder="Code" />

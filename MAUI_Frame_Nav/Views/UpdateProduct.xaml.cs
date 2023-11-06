@@ -3,6 +3,8 @@ using MAUI_Frame_Nav.Data;
 
 namespace MAUI_Frame_Nav.Views
 {
+
+    //CHANGE OR ADD CONTENT VIEW ON THIS PAGE
     public partial class UpdateProduct : ContentPage
     {
         private Repository _repository;
@@ -11,7 +13,7 @@ namespace MAUI_Frame_Nav.Views
         {
             InitializeComponent();
             _repository = new Repository();
-            ProductIdEntry.Text = sentProduct.Id.ToString();
+            ProductIdLabel.Text = sentProduct.Id.ToString();
             ProductNameEntry.Text = sentProduct.Product;
             PriceEntry.Text = sentProduct?.Price.ToString();
             CodeEntry.Text = sentProduct?.Code.ToString();
@@ -19,7 +21,7 @@ namespace MAUI_Frame_Nav.Views
 
         private void OnUpdateClicked(object sender, EventArgs e)
         {
-            int productId = Convert.ToInt32(ProductIdEntry.Text);
+            int productId = Convert.ToInt32(ProductIdLabel.Text);
             string productName = ProductNameEntry.Text;
             double price = Convert.ToDouble(PriceEntry.Text);
             string code = CodeEntry.Text;

@@ -1,13 +1,11 @@
-﻿using System;
-using System.Threading.Tasks;
-using System.Windows.Input;
-using Microsoft.Maui.Controls;
-using MAUI_Frame_Nav.Data;
+﻿using MAUI_Frame_Nav.Data;
 using CommunityToolkit.Mvvm.ComponentModel;
-using CommunityToolkit.Mvvm.Input;
+
 
 namespace MAUI_Frame_Nav.ViewModels
 {
+    //DETAILS, UPDATE AND DELETE VIEWMODEL
+    //Viewmodel for a content view - Started this implamentation 
     public class ProductDetailsViewModel : ObservableObject
     {
         private Products _product;

@@ -2,9 +2,13 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MAUI_Frame_Nav.Views.DeleteProduct">
 
-    <StackLayout>
-        <Label Text="Delete Product" FontAttributes="Bold" FontSize="Large" HorizontalOptions="Center" Margin="0,20,0,20" />
-        <Entry x:Name="ProductIdEntry" Placeholder="Product ID" />
-        <Button Text="Delete" Clicked="OnDeleteClicked" />
+    <StackLayout Padding="10" BackgroundColor="LightCoral">
+        <Label Text="Are You Sure you Want To Delete This Product" FontAttributes="Bold" FontSize="Large" HorizontalOptions="Center" Margin="0,20,0,20" />
+
+        <Label FontSize="Medium" x:Name="ProductId" Text="Product ID" />
+        <Label FontSize="Medium"  x:Name="ProductName" Text="Product Name" />
+        <Label FontSize="Medium"  x:Name="Price" Text="Price" />
+        <Label FontSize="Medium"  x:Name="Code" Text="Code" />
+        <Button Text="Yes I am sure. Delete" Clicked="OnDeleteClicked" />
     </StackLayout>
 </ContentPage>
