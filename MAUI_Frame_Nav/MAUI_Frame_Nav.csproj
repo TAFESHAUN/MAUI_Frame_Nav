@@ -57,12 +57,11 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Compile Update="Views\DeleteProduct.xaml.cs">
-	    <DependentUpon>DeleteProduct.xaml</DependentUpon>
-	  </Compile>
-	  <Compile Update="Components\ProductDetailsView.xaml.cs">
-	    <DependentUpon>ProductDetailsView.xaml</DependentUpon>
-	  </Compile>
+	  <Folder Include="Model\" />
+	  <Folder Include="Data\" />
+	</ItemGroup>
+
+	<ItemGroup>
 	  <Compile Update="Components\ProductListView.xaml.cs">
 	    <DependentUpon>ProductListView.xaml</DependentUpon>
 	  </Compile>
