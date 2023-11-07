@@ -3,7 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:MAUI_Frame_Nav"
              x:Class="MAUI_Frame_Nav.MainPage"
-             xmlns:custom="clr-namespace:MAUI_Frame_Nav.Components">
+             xmlns:custom="clr-namespace:MAUI_Frame_Nav.Components"
+             >
 
     <Grid>
         <Grid.ColumnDefinitions>
