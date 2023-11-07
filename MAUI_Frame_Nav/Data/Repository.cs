@@ -30,7 +30,7 @@ namespace MAUI_Frame_Nav.Data
             var productList = new List<Products>();
             //OPEN THE DB
             using (SqlConnection connection = new SqlConnection(_connectionString))
-            using (var command = new SqlCommand("SELECT * FROM Products", connection)) //COMMAND THE DB TO DO SOMETHING
+            using (var command = new SqlCommand("SELECT * FROM Products2", connection)) //COMMAND THE DB TO DO SOMETHING
             {
                 connection.Open();
                 var reader = command.ExecuteReader();
@@ -61,7 +61,7 @@ namespace MAUI_Frame_Nav.Data
             using (var connection = new SqlConnection(_connectionString))
             using (var command = new SqlCommand())
             {
-                command.CommandText = "UPDATE Products SET Product=@Product,Price=@Price,Code=@Code WHERE Id = @id";
+                command.CommandText = "UPDATE Products2 SET Product=@Product,Price=@Price,Code=@Code WHERE Id = @id";
                 command.Parameters.AddWithValue("@id", p.Id);
                 command.Parameters.AddWithValue("@Product", p.Product);
                 command.Parameters.AddWithValue("@Price", p.Price);
@@ -82,7 +82,7 @@ namespace MAUI_Frame_Nav.Data
             using (var connection = new SqlConnection(_connectionString))
             using (var command = new SqlCommand())
             {
-                command.CommandText = "INSERT INTO Products VALUES (@Product,@Price,@Code)";
+                command.CommandText = "INSERT INTO Products2 VALUES (@Product,@Price,@Code)";
                 //command.Parameters.AddWithValue("@id", p.Id);
                 command.Parameters.AddWithValue("@Product", p.Product);
                 command.Parameters.AddWithValue("@Price", p.Price);
@@ -102,7 +102,7 @@ namespace MAUI_Frame_Nav.Data
             using (var connection = new SqlConnection(_connectionString))
             using (var command = new SqlCommand())
             {
-                command.CommandText = "DELETE FROM Products WHERE Id=@id";
+                command.CommandText = "DELETE FROM Products2 WHERE Id=@id";
                 command.Parameters.AddWithValue("@id", p.Id);
                 command.Connection = connection;
                 connection.Open();

@@ -7,15 +7,17 @@ namespace MAUI_Frame_Nav
 {
     public partial class MainPage : ContentPage
     {
-        //private Repository _repo;
+        private Repository _repo;
 
         public MainPage()
         {
             InitializeComponent();
             //myFrame.Navigate(new Views.Index(_repo));
+            //myFrame.Navigation. -> Seperate Project Move to APP
+            //SHELL
         }
 
-        
+
         private void Refresh(object recipient, RefreshMessage message)
         {
             // Handle the message, for example, update your product list

@@ -89,6 +89,8 @@ namespace MAUI_Frame_Nav.Components
                 var productDetailPage = new ProductsDetails(product);
                 Navigation.PushAsync(productDetailPage);
             }
+
+            //if(sender is Frame frame && frame.CommandParmeter is )
         }
     }
 }
