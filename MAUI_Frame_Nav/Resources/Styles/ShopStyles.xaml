@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MAUI_Frame_Nav.Resources.Styles.ShopStyles">
+    
+    <Style x:Key="MyProductLabelStyle" TargetType="Label">
+        <Setter Property="TextColor" Value="LightSeaGreen" />
+        <Setter Property="FontSize" Value="20" />
+        <Setter Property="FontAttributes" Value="Bold" />
+    </Style>
+
+    <Style x:Key="ProductViewBtnStyle" TargetType="Button">
+        <Setter Property="TextColor" Value="LightSeaGreen"/>
+        <Setter Property="FontSize" Value="25"/>
+        <Setter Property="BackgroundColor" Value="WhiteSmoke"/>
+        <Setter Property="FontAttributes" Value="Bold"/>
+        <Setter Property="MaximumWidthRequest" Value="250"/>
+    </Style>
+</ResourceDictionary>

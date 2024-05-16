@@ -19,10 +19,14 @@
         <Label Text="My Shop" />
 
         <Grid Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2">
-            <Label Text="Product List" FontAttributes="Bold" FontSize="Large" HorizontalOptions="Center" Margin="0,20,0,20" />
-            <custom:ProductListView x:Name="productListView"/>
+            <Grid.RowDefinitions>
+                <RowDefinition Height=".15*"/>
+                <RowDefinition Height=".85*"/>
+            </Grid.RowDefinitions>
+            <Label Grid.Row="0" Text="Product List" FontAttributes="Bold" FontSize="Large" HorizontalOptions="Center" Margin="0,20,0,20" />
+            <custom:ProductListView Grid.Row="1" x:Name="productListView"/>
         </Grid>
 
-        <Frame x:Name="myFrame"></Frame>
+        <!--<Frame x:Name="myFrame"></Frame>-->
     </Grid>
 </ContentPage>

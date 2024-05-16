@@ -8,13 +8,13 @@
         <CollectionView.ItemTemplate>
             <DataTemplate>
                 <Grid Padding="10">
-                    <Frame BorderColor="LightGray" CornerRadius="5" HasShadow="True">
+                    <Frame BorderColor="LightGray" BackgroundColor="DarkSlateGrey" CornerRadius="5" HasShadow="True">
                         <StackLayout>
-                            <Label Text="{Binding Product}" FontAttributes="Bold" />
+                            <Label Style="{StaticResource MyProductLabelStyle}" Text="{Binding Product}" FontAttributes="Bold" />
                             <Label Text="{Binding Price, StringFormat='Price: {0:C}'}" />
                             <Label Text="{Binding Code}" />
                             <!--<Label Text="{Binding IsDeal}" />-->
-                            <Button Text="View Details" Clicked="OnViewDetailsClicked" CommandParameter="{Binding .}" />
+                            <Button Style="{StaticResource ProductViewBtnStyle}" Text="View Details" Clicked="OnViewDetailsClicked" CommandParameter="{Binding .}" />
                         </StackLayout>
                     </Frame>
                 </Grid>
