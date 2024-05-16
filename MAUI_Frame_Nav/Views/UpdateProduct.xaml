@@ -5,9 +5,9 @@
     <StackLayout Padding="10" BackgroundColor="MediumPurple">
         <Label Text="Update Product" FontAttributes="Bold" FontSize="Large" HorizontalOptions="Center" Margin="0,20,0,20" />
         <Label x:Name="ProductIdLabel" Text="Product ID" />
-        <Entry x:Name="ProductNameEntry" Placeholder="Product Name" />
-        <Entry x:Name="PriceEntry" Placeholder="Price" />
-        <Entry x:Name="CodeEntry" Placeholder="Code" />
+        <Entry Focused="Entry_Focused" x:Name="ProductNameEntry" Placeholder="Product Name" />
+        <Entry Focused="Entry_Focused" x:Name="PriceEntry" Placeholder="Price" />
+        <Entry Focused="Entry_Focused" x:Name="CodeEntry" Placeholder="Code" />
         <Button Text="Update" Clicked="OnUpdateClicked" />
     </StackLayout>
 </ContentPage>

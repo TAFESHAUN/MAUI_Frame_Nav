@@ -1,9 +1,9 @@
 using Microsoft.Maui.Controls;
 using MAUI_Frame_Nav.Data;
+using System;
 
 namespace MAUI_Frame_Nav.Views
 {
-
     //CHANGE OR ADD CONTENT VIEW ON THIS PAGE
     public partial class UpdateProduct : ContentPage
     {
@@ -17,6 +17,18 @@ namespace MAUI_Frame_Nav.Views
             ProductNameEntry.Text = sentProduct.Product;
             PriceEntry.Text = sentProduct?.Price.ToString();
             CodeEntry.Text = sentProduct?.Code.ToString();
+
+            // Set event handlers for focused events to set cursor to end of text & trimIt
+            ProductNameEntry.Focused += Entry_Focused;
+            PriceEntry.Focused += Entry_Focused;
+            CodeEntry.Focused += Entry_Focused;
+        }
+
+        private void Entry_Focused(object sender, FocusEventArgs e)
+        {
+            var entry = (Entry)sender;
+            entry.Text = entry.Text.Trim(); // Trim white space
+            entry.CursorPosition = entry.Text.Length; // Set cursor to end of text
         }
 
         private void OnUpdateClicked(object sender, EventArgs e)
